@@ -2,13 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using BookStore.Domain.Entity.Base;
 
 namespace BookStore.Domain.Entity;
 
-public class Book
+public class Book : BaseEntity
 {
-    [Key]
-    public int BookId { get; set; }
     public string Title { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
     public DateTime? PublishedOn { get; set; }

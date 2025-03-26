@@ -1,11 +1,10 @@
 using System.ComponentModel.DataAnnotations;
+using BookStore.Domain.Entity.Base;
 
 namespace BookStore.Domain.Entity;
 
-public class PriceOffers
+public class PriceOffers : BaseEntity
 {
-    [Key]
-    public int PriceOfferId { get; set; }
     public decimal NewPrice { get; set; }
     public string PromotionalText { get; set; } = string.Empty;
     
