@@ -23,8 +23,7 @@ public class BookStoreContext : DbContext
                 warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
 
             optionsBuilder
-                .LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information)
-                .UseSqlServer("Server=(localdb)\\MSSqlLocalDB;Initial Catalog=BookStore;Integrated Security=True");
+                .LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information);
 
         }
     }
